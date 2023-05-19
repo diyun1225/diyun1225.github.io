@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Node-RED Flow</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="flow"></div>
+
+  <script>
+    $(document).ready(function() {
+      $.getJSON('your-flow.json', function(data) {
+        var flow = JSON.stringify(data, null, 2);
+        $('#flow').text(flow);
+      });
+    });
+  </script>
+</body>
+</html>
