@@ -1,0 +1,983 @@
+[
+    {
+        "id": "6be1456e1672e2ec",
+        "type": "tab",
+        "label": "流程1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "443d409d290a92d7",
+        "type": "mqtt in",
+        "z": "6be1456e1672e2ec",
+        "name": "",
+        "topic": "mongoDB/sensors",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b9532f6f552d2208",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "33be4b7fd52c0040",
+                "4428ab17f26794d4",
+                "7907ec8338167484",
+                "61aedba7656e5ca1",
+                "3c64452a54fad2d9",
+                "daad59a4983f0465",
+                "339b2989249a6d06"
+            ]
+        ]
+    },
+    {
+        "id": "4428ab17f26794d4",
+        "type": "change",
+        "z": "6be1456e1672e2ec",
+        "name": "環境溫度",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.environment_temperature",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 40,
+        "wires": [
+            [
+                "c034ec449988aeb7"
+            ]
+        ]
+    },
+    {
+        "id": "691e8b6dc75b1458",
+        "type": "debug",
+        "z": "6be1456e1672e2ec",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7907ec8338167484",
+        "type": "debug",
+        "z": "6be1456e1672e2ec",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "33be4b7fd52c0040",
+        "type": "change",
+        "z": "6be1456e1672e2ec",
+        "name": "環境溼度",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.environment_humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 220,
+        "wires": [
+            [
+                "9187822276ef8b50"
+            ]
+        ]
+    },
+    {
+        "id": "daad59a4983f0465",
+        "type": "change",
+        "z": "6be1456e1672e2ec",
+        "name": "風速",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.wind_speed",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 340,
+        "wires": [
+            [
+                "23cd95664dd2cb43"
+            ]
+        ]
+    },
+    {
+        "id": "339b2989249a6d06",
+        "type": "change",
+        "z": "6be1456e1672e2ec",
+        "name": "風向",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.wind_direction",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 460,
+        "wires": [
+            [
+                "a8a562e728d76923"
+            ]
+        ]
+    },
+    {
+        "id": "07a719bc25b209c6",
+        "type": "ui_gauge",
+        "z": "6be1456e1672e2ec",
+        "name": "環境濕度",
+        "group": "865e9993032ba1fc",
+        "order": 1,
+        "width": 7,
+        "height": 5,
+        "gtype": "wave",
+        "title": "環境溼度",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "split-lower",
+        "x": 780,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "2b6b663d2c9750fe",
+        "type": "ui_chart",
+        "z": "6be1456e1672e2ec",
+        "name": "歷史環境溫度",
+        "group": "7d871a6e8f4c9593",
+        "order": 2,
+        "width": 7,
+        "height": 5,
+        "label": "歷史環境溫度",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 800,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9cc8927222b5f366",
+        "type": "debug",
+        "z": "6be1456e1672e2ec",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3c64452a54fad2d9",
+        "type": "change",
+        "z": "6be1456e1672e2ec",
+        "name": "電流",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.DCcurrent",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 660,
+        "wires": [
+            [
+                "acc49c07b0d89fbf",
+                "20356ad0dd986de0"
+            ]
+        ]
+    },
+    {
+        "id": "61aedba7656e5ca1",
+        "type": "change",
+        "z": "6be1456e1672e2ec",
+        "name": "電壓",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.DCvoltage",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 560,
+        "wires": [
+            [
+                "8a4561be9276f4ca",
+                "9020817ba284881f"
+            ]
+        ]
+    },
+    {
+        "id": "fa7c594ba893d1d4",
+        "type": "change",
+        "z": "6be1456e1672e2ec",
+        "name": "內部溫度",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6aa4cbafce621291",
+        "type": "ui_chart",
+        "z": "6be1456e1672e2ec",
+        "name": "歷史環境濕度",
+        "group": "865e9993032ba1fc",
+        "order": 2,
+        "width": 7,
+        "height": 5,
+        "label": "歷史環境濕度",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 800,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e1d3fa3da5a319d1",
+        "type": "ui_gauge",
+        "z": "6be1456e1672e2ec",
+        "name": "環境溫度",
+        "group": "7d871a6e8f4c9593",
+        "order": 1,
+        "width": 7,
+        "height": 5,
+        "gtype": "gage",
+        "title": "環境溫度",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "80",
+        "colors": [
+            "#96d35f",
+            "#e4ef65",
+            "#ff6251"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "split-upper",
+        "x": 780,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "8a4561be9276f4ca",
+        "type": "ui_gauge",
+        "z": "6be1456e1672e2ec",
+        "name": "電壓",
+        "group": "22bd146990bf3867",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "電壓",
+        "label": "V",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 610,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "acc49c07b0d89fbf",
+        "type": "ui_gauge",
+        "z": "6be1456e1672e2ec",
+        "name": "電流",
+        "group": "a8d8566fb1f375b9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "電流",
+        "label": "A",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 530,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "9020817ba284881f",
+        "type": "ui_chart",
+        "z": "6be1456e1672e2ec",
+        "name": "歷史電壓",
+        "group": "22bd146990bf3867",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "歷史電壓",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 620,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "20356ad0dd986de0",
+        "type": "ui_chart",
+        "z": "6be1456e1672e2ec",
+        "name": "歷史電流",
+        "group": "a8d8566fb1f375b9",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "歷史電流",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 540,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dae98371ed59d899",
+        "type": "ui_gauge",
+        "z": "6be1456e1672e2ec",
+        "name": "風向",
+        "group": "063782be7e4b37bc",
+        "order": 1,
+        "width": 7,
+        "height": 4,
+        "gtype": "compass",
+        "title": "風向",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "360",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 650,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "83bd0b7302fddc59",
+        "type": "ui_chart",
+        "z": "6be1456e1672e2ec",
+        "d": true,
+        "name": "歷史風向",
+        "group": "063782be7e4b37bc",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "歷史風向",
+        "chartType": "polar-area",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 660,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1a4ee0ef2957a6d4",
+        "type": "ui_chart",
+        "z": "6be1456e1672e2ec",
+        "name": "歷史風速",
+        "group": "6886ea53e74eee0c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "歷史風速",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 680,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7fb27c7dd1e98905",
+        "type": "ui_gauge",
+        "z": "6be1456e1672e2ec",
+        "name": "風速",
+        "group": "6886ea53e74eee0c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "風速",
+        "label": "m/s",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#b1dd8c",
+            "#ebf38f",
+            "#ff6251"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 670,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c034ec449988aeb7",
+        "type": "function",
+        "z": "6be1456e1672e2ec",
+        "name": "小數點＋過濾錯誤訊息(ok)",
+        "func": "var number = parseFloat(msg.payload);\nvar roundedNumber = number.toFixed(2);\nvar before = null;\n\n// 在函式之外定義 before 變數\nvar before = context.get('before') || null;\n\nif (parseFloat(roundedNumber) !== 255 && parseFloat(roundedNumber) < 80) {\n  msg.payload = roundedNumber;\n  before = roundedNumber;  // 更新 before 的值\n} else {\n  if (before === null) {\n    roundedNumber = 0;\n    msg.payload = roundedNumber;\n  } else {\n    msg.payload = before;\n  }\n}\n\n// 將更新後的 before 變數存儲到上下文中\ncontext.set('before', before);\n\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 40,
+        "wires": [
+            [
+                "e1d3fa3da5a319d1",
+                "2b6b663d2c9750fe",
+                "691e8b6dc75b1458"
+            ]
+        ]
+    },
+    {
+        "id": "23cd95664dd2cb43",
+        "type": "function",
+        "z": "6be1456e1672e2ec",
+        "name": "是否為0(ok)",
+        "func": "if (msg.payload === 1e-8) {\n    msg.payload = 0;\n}return msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 340,
+        "wires": [
+            [
+                "7fb27c7dd1e98905",
+                "1a4ee0ef2957a6d4"
+            ]
+        ]
+    },
+    {
+        "id": "a8a562e728d76923",
+        "type": "function",
+        "z": "6be1456e1672e2ec",
+        "name": "小數點",
+        "func": "// 你收到的數字\nvar number = parseFloat(msg.payload);\nvar roundedNumber = number.toFixed(2);\n// 取小數點後兩位\nvar roundedNumber = number.toFixed(2);\n\n// 將結果存儲在 msg.payload 中\nmsg.payload = roundedNumber;\n\n// 將處理後的訊息傳遞到下一個節點\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 460,
+        "wires": [
+            [
+                "dae98371ed59d899",
+                "83bd0b7302fddc59",
+                "9cc8927222b5f366"
+            ]
+        ]
+    },
+    {
+        "id": "9187822276ef8b50",
+        "type": "function",
+        "z": "6be1456e1672e2ec",
+        "name": "小數點＋過濾錯誤訊息(ok)",
+        "func": "var number = parseFloat(msg.payload);\nvar roundedNumber = number.toFixed(2);\nvar before=null;\n\n// 在函式之外定義 before 變數\nvar before = context.get('before') || null;\n\nif (parseFloat(roundedNumber) !== 255 && parseFloat(roundedNumber) < 100) {\n  msg.payload = roundedNumber;\n  before = roundedNumber;  // 更新 before 的值\n} else {\n  if (before === null) {\n    roundedNumber = 0;\n    msg.payload = roundedNumber;\n  } else {\n    msg.payload = before;\n  }\n}\n\n// 將更新後的 before 變數存儲到上下文中\ncontext.set('before', before);\n\nreturn msg;\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "null",
+                "module": "before"
+            }
+        ],
+        "x": 550,
+        "y": 220,
+        "wires": [
+            [
+                "07a719bc25b209c6",
+                "6aa4cbafce621291"
+            ]
+        ]
+    },
+    {
+        "id": "6a54a762688147db",
+        "type": "function",
+        "z": "6be1456e1672e2ec",
+        "name": "模擬",
+        "func": "// 生成介於 0 到 100 之間的隨機小數，保留兩位小數\nvar randomNum = (Math.random() * 10).toFixed(5);\nmsg.payload = randomNum;\nreturn msg;\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 90,
+        "y": 440,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a9ce0744bad9069e",
+        "type": "inject",
+        "z": "6be1456e1672e2ec",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "6a54a762688147db",
+                "84942a29206da0b0"
+            ]
+        ]
+    },
+    {
+        "id": "84942a29206da0b0",
+        "type": "function",
+        "z": "6be1456e1672e2ec",
+        "name": "function 1",
+        "func": "msg.payload=80;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 120,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b9532f6f552d2208",
+        "type": "mqtt-broker",
+        "name": "broker.emqx.io",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "865e9993032ba1fc",
+        "type": "ui_group",
+        "name": "環境溼度",
+        "tab": "114febdd1f6936f0",
+        "order": 3,
+        "disp": false,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d871a6e8f4c9593",
+        "type": "ui_group",
+        "name": "環境溫度",
+        "tab": "114febdd1f6936f0",
+        "order": 2,
+        "disp": false,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "22bd146990bf3867",
+        "type": "ui_group",
+        "name": "電壓",
+        "tab": "a9a517939dc82e9e",
+        "order": 1,
+        "disp": false,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a8d8566fb1f375b9",
+        "type": "ui_group",
+        "name": "電流",
+        "tab": "a9a517939dc82e9e",
+        "order": 2,
+        "disp": false,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "063782be7e4b37bc",
+        "type": "ui_group",
+        "name": "風向",
+        "tab": "9d9c65987a2a2227",
+        "order": 2,
+        "disp": false,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6886ea53e74eee0c",
+        "type": "ui_group",
+        "name": "風速",
+        "tab": "9d9c65987a2a2227",
+        "order": 1,
+        "disp": false,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "114febdd1f6936f0",
+        "type": "ui_tab",
+        "name": "環境狀態",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a9a517939dc82e9e",
+        "type": "ui_tab",
+        "name": "電壓電流",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9d9c65987a2a2227",
+        "type": "ui_tab",
+        "name": "風速風向",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    }
+]
