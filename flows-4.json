@@ -8,6 +8,262 @@
         "env": []
     },
     {
+        "id": "641a7efabb48d419",
+        "type": "tab",
+        "label": "style",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b34dd628e53acae5",
+        "type": "tab",
+        "label": "css",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "37815a40ab835415",
+        "type": "tab",
+        "label": "流程2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b9532f6f552d2208",
+        "type": "mqtt-broker",
+        "name": "broker.emqx.io",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "2c37b1a3cf40e761",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#791a3e",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#ffffff",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#ebebeb",
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#aaaaaa",
+                    "edited": true
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": true
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#000000",
+                    "edited": true
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "widget-textColor": {
+                    "value": "#000000",
+                    "edited": true
+                },
+                "widget-backgroundColor": {
+                    "value": "#3a88fe",
+                    "edited": true
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "114febdd1f6936f0",
+        "type": "ui_tab",
+        "name": "環境狀態",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7d871a6e8f4c9593",
+        "type": "ui_group",
+        "name": "環境溫度",
+        "tab": "114febdd1f6936f0",
+        "order": 2,
+        "disp": false,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "865e9993032ba1fc",
+        "type": "ui_group",
+        "name": "環境溼度",
+        "tab": "114febdd1f6936f0",
+        "order": 3,
+        "disp": false,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a9a517939dc82e9e",
+        "type": "ui_tab",
+        "name": "電壓電流",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "22bd146990bf3867",
+        "type": "ui_group",
+        "name": "電壓",
+        "tab": "a9a517939dc82e9e",
+        "order": 1,
+        "disp": false,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a8d8566fb1f375b9",
+        "type": "ui_group",
+        "name": "電流",
+        "tab": "a9a517939dc82e9e",
+        "order": 2,
+        "disp": false,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9d9c65987a2a2227",
+        "type": "ui_tab",
+        "name": "風速風向",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6886ea53e74eee0c",
+        "type": "ui_group",
+        "name": "風速",
+        "tab": "9d9c65987a2a2227",
+        "order": 1,
+        "disp": false,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "063782be7e4b37bc",
+        "type": "ui_group",
+        "name": "風向",
+        "tab": "9d9c65987a2a2227",
+        "order": 2,
+        "disp": false,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b5a761377323aeda",
+        "type": "ui_spacer",
+        "z": "b34dd628e53acae5",
+        "name": "spacer",
+        "group": "e9a943057ac15fd8",
+        "order": 1,
+        "width": 5,
+        "height": 1
+    },
+    {
         "id": "443d409d290a92d7",
         "type": "mqtt in",
         "z": "6be1456e1672e2ec",
@@ -858,126 +1114,131 @@
         ]
     },
     {
-        "id": "b9532f6f552d2208",
-        "type": "mqtt-broker",
-        "name": "broker.emqx.io",
-        "broker": "broker.emqx.io",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "865e9993032ba1fc",
-        "type": "ui_group",
-        "name": "環境溼度",
-        "tab": "114febdd1f6936f0",
+        "id": "1d3d368a4cd4113e",
+        "type": "ui_template",
+        "z": "b34dd628e53acae5",
+        "group": "7d871a6e8f4c9593",
+        "name": "環境狀態css",
         "order": 3,
-        "disp": false,
         "width": 7,
-        "collapse": false,
-        "className": ""
+        "height": 1,
+        "format": "<style>\n    #nr-dashboard {\n        /* 整體*/\n        font-weight: bold!important;\n        font-size: 20px;\n        background-color: #FFFFF !important;\n        width: 90%;\n        /* 定義容器的寬度，可以使用百分比或具體數值 */\n        margin: 0 auto;\n        /* 水平置中，讓容器位於頁面的中間 */\n        padding: 20px;\n        /* 可選：定義容器的內邊距 */\n        border: 1px solid #ccc;\n        /* 可選：定義容器的邊框 */\n        border-radius: 5px;\n        /* 可選：定義容器的圓角 */\n        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);\n        /* 可選：定義容器的陰影效果 */\n    }\n\n    #toolbar {\n        border-radius: 5px;\n        /* 可選：定義容器的圓角 */\n        background-color: none;\n    }\n\n    #環境狀態_環境溫度 {\n        background: radial-gradient(to right, #FAF9FE, #F1F2F8) !important;\n        left: 200px !important;\n        top: 6px !important;\n        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;\n        /* 陰影 */\n        padding: 20px !important;\n        /* 可選：定義容器的內邊距 */\n        border: 1px solid #ccc;\n        /* 可選：定義容器的邊框 */\n        border-radius: 10px !important;\n        /* 圓角圓度 */\n        display: flex !important;\n    }\n\n    #環境狀態_環境溼度 {\n        background: radial-gradient(to right, #FAF9FE, #F1F2F8) !important;\n        left: 650px !important;\n        top: 6px !important;\n        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;\n        /* 陰影 */\n        padding: 20px !important;\n        /* 可選：定義容器的內邊距 */\n        border: 1px solid #ccc !important;\n        /* 可選：定義容器的邊框 */\n        border-radius: 10px !important;\n        /* 圓角圓度 */\n        display: flex !important;\n    }\n\n \n    #nr-dashboard-menu-toggle i {\n    color: #00FF00 !important; /* 將 #ff0000 替換為你想要的顏色代碼 */\n    }\n    #current-time{ /* 現在時間美觀 */\n    position: fixed;\n    top: 30px;\n    left: 250px;\n    background-color: none;\n    padding: 10px;\n    z-index: 9999;\n    font-weight: bold;\n    }\n</style>\n\n\n\n\n\n\n<div id=\"current-time\"></div>\n<script>\n    //取得現在時間\n  (function(scope) {\n  function displayCurrentTime() {\n    var currentDateTime = new Date();\n\n    // 取得日期部分，包含西元年\n    var date = currentDateTime.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });\n\n    // 取得時間部分\n    var hours = currentDateTime.getHours();\n    var minutes = currentDateTime.getMinutes();\n    var seconds = currentDateTime.getSeconds();\n\n    // 將時間格式化為 00:00:00 的形式\n    var formattedTime = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');\n\n    // 將日期和時間顯示在指定的元素中\n    document.getElementById('current-time').textContent = date + ' ' + formattedTime;\n  }\n\n  // 每秒更新一次時間\n  setInterval(displayCurrentTime, 1000);\n})(scope);",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            []
+        ]
     },
     {
-        "id": "7d871a6e8f4c9593",
-        "type": "ui_group",
-        "name": "環境溫度",
-        "tab": "114febdd1f6936f0",
-        "order": 2,
-        "disp": false,
-        "width": 7,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "22bd146990bf3867",
-        "type": "ui_group",
-        "name": "電壓",
-        "tab": "a9a517939dc82e9e",
-        "order": 1,
-        "disp": false,
-        "width": 7,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "a8d8566fb1f375b9",
-        "type": "ui_group",
-        "name": "電流",
-        "tab": "a9a517939dc82e9e",
-        "order": 2,
-        "disp": false,
-        "width": 7,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "063782be7e4b37bc",
-        "type": "ui_group",
-        "name": "風向",
-        "tab": "9d9c65987a2a2227",
-        "order": 2,
-        "disp": false,
-        "width": 7,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "6886ea53e74eee0c",
-        "type": "ui_group",
-        "name": "風速",
-        "tab": "9d9c65987a2a2227",
-        "order": 1,
-        "disp": false,
-        "width": 7,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "114febdd1f6936f0",
-        "type": "ui_tab",
-        "name": "環境狀態",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "a9a517939dc82e9e",
-        "type": "ui_tab",
-        "name": "電壓電流",
-        "icon": "dashboard",
+        "id": "eee3ee30806e513a",
+        "type": "ui_template",
+        "z": "b34dd628e53acae5",
+        "group": "6886ea53e74eee0c",
+        "name": "風速風向css",
         "order": 3,
-        "disabled": false,
-        "hidden": false
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    #nr-dashboard {\n        /* 整體*/\n        font-size: 20px;\n        font-weight: bold !important;\n        background-color: #FFFFF !important;\n        width: 90%;\n        /* 定義容器的寬度，可以使用百分比或具體數值 */\n        margin: 0 auto;\n        /* 水平置中，讓容器位於頁面的中間 */\n        padding: 20px;\n        /* 可選：定義容器的內邊距 */\n        border: 1px solid #ccc;\n        /* 可選：定義容器的邊框 */\n        border-radius: 5px;\n        /* 可選：定義容器的圓角 */\n        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);\n        /* 可選：定義容器的陰影效果 */\n    }\n\n    #toolbar {\n        border-radius: 5px;\n        /* 可選：定義容器的圓角 */\n        background-color: none;\n    }\n\n    #風速風向_風速 {\n        background: radial-gradient(to right, #FAF9FE, #F1F2F8) !important;\n        left: 200px !important;\n        top: 6px !important;\n        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;\n        /* 陰影 */\n        padding: 20px !important;\n        /* 可選：定義容器的內邊距 */\n        border: 1px solid #ccc;\n        /* 可選：定義容器的邊框 */\n        border-radius: 10px !important;\n        /* 圓角圓度 */\n        display: flex !important;\n    }\n\n    #風速風向_風向 {\n        background: radial-gradient(to right, #FAF9FE, #F1F2F8) !important;\n        left: 650px !important;\n        top: 6px !important;\n        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;\n        /* 陰影 */\n        padding: 20px !important;\n        /* 可選：定義容器的內邊距 */\n        border: 1px solid #ccc !important;\n        /* 可選：定義容器的邊框 */\n        border-radius: 10px !important;\n        /* 圓角圓度 */\n        display: flex !important;\n    }\n\n\n    #nr-dashboard-menu-toggle i {\n        color: #00FF00 !important;\n        /* 將 #ff0000 替換為你想要的顏色代碼 */\n    }\n\n    #current-time {\n        /* 現在時間美觀 */\n        position: fixed;\n        top: 30px;\n        left: 250px;\n        background-color: none;\n        padding: 10px;\n        z-index: 9999;\n        font-weight: bold;\n    }\n</style>\n\n\n\n\n\n\n<div id=\"current-time\"></div>\n<script>\n    //取得現在時間\n  (function(scope) {\n  function displayCurrentTime() {\n    var currentDateTime = new Date();\n\n    // 取得日期部分，包含西元年\n    var date = currentDateTime.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });\n\n    // 取得時間部分\n    var hours = currentDateTime.getHours();\n    var minutes = currentDateTime.getMinutes();\n    var seconds = currentDateTime.getSeconds();\n\n    // 將時間格式化為 00:00:00 的形式\n    var formattedTime = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');\n\n    // 將日期和時間顯示在指定的元素中\n    document.getElementById('current-time').textContent = date + ' ' + formattedTime;\n  }\n\n  // 每秒更新一次時間\n  setInterval(displayCurrentTime, 1000);\n})(scope);",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 130,
+        "y": 200,
+        "wires": [
+            []
+        ]
     },
     {
-        "id": "9d9c65987a2a2227",
-        "type": "ui_tab",
-        "name": "風速風向",
-        "icon": "dashboard",
+        "id": "22f7380a8ae97837",
+        "type": "ui_template",
+        "z": "b34dd628e53acae5",
+        "group": "22bd146990bf3867",
+        "name": "電壓電流css",
         "order": 3,
-        "disabled": false,
-        "hidden": false
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    #nr-dashboard {\n        /* 整體*/\n        font-size: 20px;\n        font-weight: bold !important;\n        background-color: #FFFFF !important;\n        width: 90%;\n        /* 定義容器的寬度，可以使用百分比或具體數值 */\n        margin: 0 auto;\n        /* 水平置中，讓容器位於頁面的中間 */\n        padding: 20px;\n        /* 可選：定義容器的內邊距 */\n        border: 1px solid #ccc;\n        /* 可選：定義容器的邊框 */\n        border-radius: 5px;\n        /* 可選：定義容器的圓角 */\n        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);\n        /* 可選：定義容器的陰影效果 */\n    }\n\n    #toolbar {\n        border-radius: 5px;\n        /* 可選：定義容器的圓角 */\n        background-color: none;\n    }\n\n    #電壓電流_電壓 {\n        background: radial-gradient(to right, #FAF9FE, #F1F2F8) !important;\n        left: 200px !important;\n        top: 6px !important;\n        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;\n        /* 陰影 */\n        padding: 20px !important;\n        /* 可選：定義容器的內邊距 */\n        border: 1px solid #ccc;\n        /* 可選：定義容器的邊框 */\n        border-radius: 10px !important;\n        /* 圓角圓度 */\n        display: flex !important;\n    }\n\n    #電壓電流_電流 {\n        background: radial-gradient(to right, #FAF9FE, #F1F2F8) !important;\n        left: 650px !important;\n        top: 6px !important;\n        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;\n        /* 陰影 */\n        padding: 20px !important;\n        /* 可選：定義容器的內邊距 */\n        border: 1px solid #ccc !important;\n        /* 可選：定義容器的邊框 */\n        border-radius: 10px !important;\n        /* 圓角圓度 */\n        display: flex !important;\n    }\n\n\n    #nr-dashboard-menu-toggle i {\n        color: #00FF00 !important;\n        /* 將 #ff0000 替換為你想要的顏色代碼 */\n    }\n\n    #current-time {\n        /* 現在時間美觀 */\n        position: fixed;\n        top: 30px;\n        left: 250px;\n        background-color: none;\n        padding: 10px;\n        z-index: 9999;\n        font-weight: bold;\n    }\n</style>\n\n\n\n\n\n\n<div id=\"current-time\"></div>\n<script>\n    //取得現在時間\n  (function(scope) {\n  function displayCurrentTime() {\n    var currentDateTime = new Date();\n\n    // 取得日期部分，包含西元年\n    var date = currentDateTime.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });\n\n    // 取得時間部分\n    var hours = currentDateTime.getHours();\n    var minutes = currentDateTime.getMinutes();\n    var seconds = currentDateTime.getSeconds();\n\n    // 將時間格式化為 00:00:00 的形式\n    var formattedTime = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');\n\n    // 將日期和時間顯示在指定的元素中\n    document.getElementById('current-time').textContent = date + ' ' + formattedTime;\n  }\n\n  // 每秒更新一次時間\n  setInterval(displayCurrentTime, 1000);\n})(scope);",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 130,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2bf6cac89cccc6da",
+        "type": "function",
+        "z": "37815a40ab835415",
+        "name": "模擬",
+        "func": "var number = 2;\nmsg.payload = number;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 320,
+        "wires": [
+            [
+                "83c310ecfcfd2a35"
+            ]
+        ]
+    },
+    {
+        "id": "83c310ecfcfd2a35",
+        "type": "debug",
+        "z": "37815a40ab835415",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "dfac7bb33b6565f0",
+        "type": "inject",
+        "z": "37815a40ab835415",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 320,
+        "wires": [
+            [
+                "2bf6cac89cccc6da"
+            ]
+        ]
     }
 ]
